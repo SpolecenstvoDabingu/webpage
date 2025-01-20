@@ -24,6 +24,13 @@ jobs:
     - name: Install dependencies
       run: pip install -r requirements.txt
 
+    - name: Set BASE_URL
+      id: set_base_url
+      run: |
+        REPO_NAME=$(basename $GITHUB_REPOSITORY)
+        BASE_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME"
+        echo "BASE_URL=$BASE_URL" >> $GITHUB_ENV
+
     # Step 4: Run the script to generate static files
     - name: Generate static files
       working-directory: src
@@ -34,4 +41,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./src/output  # Path to the output folder
+        publish_dir: ./output  # Path to the output folder
