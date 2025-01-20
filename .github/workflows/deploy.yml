@@ -27,8 +27,12 @@ jobs:
     - name: Set BASE_URL
       id: set_base_url
       run: |
+        # Extract the repository owner from the GITHUB_REPOSITORY variable
+        REPO_OWNER=$(echo $GITHUB_REPOSITORY | cut -d'/' -f1)
         REPO_NAME=$(basename $GITHUB_REPOSITORY)
-        BASE_URL="https://$GITHUB_ACTOR.github.io/$REPO_NAME"
+        
+        # Set the BASE_URL using the repository owner
+        BASE_URL="https://$REPO_OWNER.github.io/$REPO_NAME"
         echo "BASE_URL=$BASE_URL" >> $GITHUB_ENV
 
     # Step 4: Run the script to generate static files
