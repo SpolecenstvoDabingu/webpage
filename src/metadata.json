@@ -1,5 +1,5 @@
 [
-    {"template": "home.html", "title": "Domov", "alias": "home"},
+    {"template": "index.html", "title": "Domov", "alias": "home"},
     {"template": "about.html", "title": "O nás", "alias": "about"},
     {"template": "contact.html", "title": "Kontakt", "alias": "contact"}
 ]
