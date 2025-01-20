@@ -3,10 +3,10 @@ import json
 from jinja2 import Environment, FileSystemLoader
 
 # Paths
-TEMPLATES_DIR = 'templates'
+TEMPLATES_DIR = './templates'
 PAGES_DIR = os.path.join(TEMPLATES_DIR, 'pages')
-OUTPUT_DIR = 'output'
-METADATA_FILE = 'metadata.json'
+OUTPUT_DIR = '../output'
+METADATA_FILE = './metadata.json'
 
 # Initialize Jinja2 environment
 env = Environment(loader=FileSystemLoader(TEMPLATES_DIR))
