@@ -24,12 +24,14 @@ def load_metadata():
         metadata = json.load(f)
 
     pages_urls = {}
+    pages_medatada = []
 
     for page in metadata:
         page['output'] = page['template']
         pages_urls[page['alias']] = f'{base_url}/{page["template"]}'
+        pages_medatada.append({**page, "include": page.get("include", True)})
 
-    return metadata, pages_urls
+    return pages_medatada, pages_urls
 
 def copy_assets():
     assets_output_path = os.path.join(OUTPUT_DIR, 'assets')
