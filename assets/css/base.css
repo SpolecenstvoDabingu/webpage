@@ -1,0 +1,33 @@
+.logo-bar {
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+
+    aspect-ratio: auto;
+    width: 100%;
+}
+
+.bar-color {
+    background-color: #dbd4c9;
+}
+
+.main-color {
+    background-color: #f8f0e4;
+}
+
+.footer-color {
+    background-color: #8f8a83;
+}
+
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+    
+}
