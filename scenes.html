@@ -12,8 +12,10 @@ Scénky
     <link rel="stylesheet" href="https://SpolecenstvoDabingu.github.io/webpage/assets/css/bs-expand.css">
     <link rel="stylesheet" href="https://SpolecenstvoDabingu.github.io/webpage/assets/css/base.css">
     
+<link rel="stylesheet" href="https://SpolecenstvoDabingu.github.io/webpage/assets/css/scenes.css">
+
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <!-- Header -->
     <header class="text-white pd-3">
         <a href="https://SpolecenstvoDabingu.github.io/webpage/index.html"></a>
@@ -45,7 +47,7 @@ Scénky
                                 
                                     
                                     <li class="nav-item">
-                                        <a href="https://SpolecenstvoDabingu.github.io/webpage/series.html" class="nav-link ">Seriály</a>
+                                        <a href="https://SpolecenstvoDabingu.github.io/webpage/serials.html" class="nav-link ">Seriály</a>
                                     </li>
                                     
                                 
@@ -85,13 +87,17 @@ Scénky
     </header>
 
     <!-- Main Content -->
-    <main class="py-4 main-color">
-        <div class="container">
-            
-<h2>Scénky</h2>
-<p>Welcome to the scenes page!</p>
+    <main class="py-4 main-color main-background flex-grow-1" style="background-image: url('https://SpolecenstvoDabingu.github.io/webpage/assets/imgs/background.png'); min-height: 100%;">
+        
+<div class="px-4 d-flex">
+    <div class="container">
+        <h3 class="text-center">Scénky</h3>
+        <div id="scenes" class="container mt-4">
 
         </div>
+    </div>
+</div>
+
     </main>
 
     <!-- Footer -->
@@ -120,5 +126,7 @@ Scénky
         }
     </script>
     
+<script src="https://SpolecenstvoDabingu.github.io/webpage/assets/js/scenes.js"></script>
+
 </body>
 </html>

@@ -12,8 +12,10 @@ Filmy
     <link rel="stylesheet" href="https://SpolecenstvoDabingu.github.io/webpage/assets/css/bs-expand.css">
     <link rel="stylesheet" href="https://SpolecenstvoDabingu.github.io/webpage/assets/css/base.css">
     
+<link rel="stylesheet" href="https://SpolecenstvoDabingu.github.io/webpage/assets/css/movies.css">
+
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <!-- Header -->
     <header class="text-white pd-3">
         <a href="https://SpolecenstvoDabingu.github.io/webpage/index.html"></a>
@@ -45,7 +47,7 @@ Filmy
                                 
                                     
                                     <li class="nav-item">
-                                        <a href="https://SpolecenstvoDabingu.github.io/webpage/series.html" class="nav-link ">Seriály</a>
+                                        <a href="https://SpolecenstvoDabingu.github.io/webpage/serials.html" class="nav-link ">Seriály</a>
                                     </li>
                                     
                                 
@@ -85,12 +87,17 @@ Filmy
     </header>
 
     <!-- Main Content -->
-    <main class="py-4 main-color">
-        <div class="container">
-            
-<h2>None yet</h2>
+    <main class="py-4 main-color main-background flex-grow-1" style="background-image: url('https://SpolecenstvoDabingu.github.io/webpage/assets/imgs/background.png'); min-height: 100%;">
+        
+<div class="px-4 d-flex">
+    <div class="container">
+        <h3 class="text-center">Filmy</h3>
+        <div id="movies" class="container mt-4">
 
         </div>
+    </div>
+</div>
+
     </main>
 
     <!-- Footer -->
@@ -119,5 +126,7 @@ Filmy
         }
     </script>
     
+<script src="https://SpolecenstvoDabingu.github.io/webpage/assets/js/movies.js"></script>
+
 </body>
 </html>

@@ -15,7 +15,7 @@ Home
 <link rel="stylesheet" href="https://SpolecenstvoDabingu.github.io/webpage/assets/css/index.css">
 
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <!-- Header -->
     <header class="text-white pd-3">
         <a href="https://SpolecenstvoDabingu.github.io/webpage/index.html"></a>
@@ -47,7 +47,7 @@ Home
                                 
                                     
                                     <li class="nav-item">
-                                        <a href="https://SpolecenstvoDabingu.github.io/webpage/series.html" class="nav-link ">Seriály</a>
+                                        <a href="https://SpolecenstvoDabingu.github.io/webpage/serials.html" class="nav-link ">Seriály</a>
                                     </li>
                                     
                                 
@@ -87,29 +87,31 @@ Home
     </header>
 
     <!-- Main Content -->
-    <main class="py-4 main-color">
-        <div class="container">
-            
-<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner" id="carouselContent">
-        <!-- Items will be dynamically inserted here -->
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
-<h2 class="pt-2">Novinky</h2>
-<table class="w-100">
-    <tbody class="news border-top" id="news">
-    </tbody>
-</table>
-
+    <main class="py-4 main-color main-background flex-grow-1" style="background-image: url('https://SpolecenstvoDabingu.github.io/webpage/assets/imgs/background.png'); min-height: 100%;">
+        
+<div class="px-4 d-flex">
+    <div class="container">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" id="carouselContent">
+                <!-- Items will be dynamically inserted here -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
+        <h2 class="pt-2">Novinky</h2>
+        <table class="w-100">
+            <tbody class="news border-top" id="news">
+            </tbody>
+        </table>
+    </div>
+</div>
+
     </main>
 
     <!-- Footer -->

@@ -1,3 +1,11 @@
+:root {
+    --bar-color-spolecenstvo: #dbd4c9;
+    --main-color-spolecenstvo: #f8f0e4;
+    --footer-color-spolecenstvo: #8f8a83;
+    --text-color-spolecenstvo: #46433f;
+}
+
+
 .logo-bar {
     background-repeat: no-repeat;
     background-position: center center;
@@ -11,23 +19,65 @@
     width: 100%;
 }
 
+.text-spolecenstvo {
+    color: var(--text-color-spolecenstvo)
+}
+
+.main-background {
+    background-attachment: fixed;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: repeat-y;
+}
+
 .bar-color {
-    background-color: #dbd4c9;
+    background-color: var(--bar-color-spolecenstvo);
 }
 
 .main-color {
-    background-color: #f8f0e4;
+    background-color: var(--main-color-spolecenstvo);
 }
 
 .footer-color {
-    background-color: #8f8a83;
+    background-color: var(--footer-color-spolecenstvo);
+}
+
+.spolecenstvo-container {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-spolecenstvo-x)* .5);
+    padding-left: calc(var(--bs-gutter-spolecenstvo-x)* .5);
+    margin-right: auto;
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
+    .spolecenstvo-container {
+        max-width: 540px;
+    }
+}
 
+@media (min-width: 768px) {
+    .spolecenstvo-container {
+        max-width: 720px;
+    }
 }
 
 @media (min-width: 992px) {
-    
+    .spolecenstvo-container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .spolecenstvo-container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .spolecenstvo-container {
+        max-width: 1320px;
+    }
 }
