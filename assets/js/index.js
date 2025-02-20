@@ -2,9 +2,17 @@ function getLatestEpisodes(data, number = 3) {
     const allEpisodes = [];
 
     data.forEach(series => {
-        allEpisodes.push(...series.episodes);
+        var episodes = series.episodes;
+        episodes.map(e => e.series = series);
+        var scenes = series.scenes;
+        scenes.map(e => e.series = series);
+        var movies = series.movies;
+        movies.map(e => e.series = series);
+        allEpisodes.push(...episodes);
+        allEpisodes.push(...scenes);
+        allEpisodes.push(...movies);
     });
-
+    
     allEpisodes.sort((a, b) => b.timestamp - a.timestamp);
 
     return allEpisodes.slice(0, number);
@@ -60,15 +68,13 @@ function make_news(data) {
     const newsElement = document.getElementById("news");
 
     newsElement.innerHTML = latestEpisodes.map((episode, index) => {
-        const series = data.find(series => series.episodes.includes(episode));
-    
         return `
             <tr>
                 <td rowspan="2" class="w-5">
-                    <img src="${episode.thumbnail}" alt="${episode.name}" class="d-block mr-2 news-image pr-2" style="">
+                    <img src="${episode.thumbnail}" alt="${episode.name}" class="d-block mr-2 news-image pr-2 my-1" style="">
                 </td>
                 <td class="w-50">
-                    <h6>${series.name} - ${episode.name}</h6>
+                    <h6>${episode.series.name} - ${episode.name}</h6>
                 </td>
                 <td rowspan="2" class="w-10 align-text-top">
                     <p class="text-end fs-7 fst-italic text-secondary">${timeConverter(episode.timestamp)}</p>
