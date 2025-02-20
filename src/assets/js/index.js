@@ -22,14 +22,24 @@ function getSeriesWithLatestEpisodes(data, number = 3) {
     allSeries = []
 
     data.forEach(series => {
-        var latestEpisode = null;
+        var latestItem = null;
         series.episodes.forEach(episode => {
-            if(latestEpisode == null || latestEpisode.timestamp < episode.timestamp) {
-                latestEpisode = episode;
+            if(latestItem == null || latestItem.timestamp < episode.timestamp) {
+                latestItem = episode;
             }
         })
-        if(latestEpisode != null) {
-            allSeries.push({"serie": series, "episode": latestEpisode});
+        series.scenes.forEach(scene => {
+            if(latestItem == null || latestItem.timestamp < scene.timestamp) {
+                latestItem = scene;
+            }
+        })
+        series.movies.forEach(movie => {
+            if(latestItem == null || latestItem.timestamp < movie.timestamp) {
+                latestItem = movie;
+            }
+        })
+        if(latestItem != null) {
+            allSeries.push({"serie": series, "episode": latestItem});
         }
     })
 
