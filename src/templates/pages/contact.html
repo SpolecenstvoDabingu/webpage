@@ -1,9 +1,22 @@
 {% extends "base.html" %}
 {% block title %}
-Contact
+Kontakty
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ base_url }}/assets/css/contacts.css">
 {% endblock %}
 
 {% block content %}
-<h2>Contact</h2>
-<p>Welcome to the contact page!</p>
+<div class="px-4 d-flex">
+    <div class="container">
+        <h1>Kontakty</h1>
+        <h5>TBD</h5>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block scripts %}
+<script src="{{ base_url }}/assets/js/contacts.js"></script>
 {% endblock %}

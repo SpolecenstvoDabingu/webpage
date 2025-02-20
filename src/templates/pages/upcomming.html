@@ -1,9 +1,31 @@
 {% extends "base.html" %}
 {% block title %}
-Připravujeme
+Scénky
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ base_url }}/assets/css/upcomming.css">
 {% endblock %}
 
 {% block content %}
-<h2>Připravujeme</h2>
-<p>Welcome to the upcomming page!</p>
+<div class="px-4 d-flex">
+    <div class="container">
+        <h3 class="text-center">Filmy</h3>
+        <div id="movies" class="container mt-4">
+
+        </div>
+        <h3 class="text-center">Seriály</h3>
+        <div id="serials" class="container mt-4">
+
+        </div>
+        <h3 class="text-center">Scénky</h3>
+        <div id="scenes" class="container mt-4">
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ base_url }}/assets/js/upcomming.js"></script>
 {% endblock %}

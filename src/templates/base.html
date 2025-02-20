@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{{ base_url }}/assets/css/base.css">
     {% block styles %}{% endblock %}
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <!-- Header -->
     <header class="text-white pd-3">
         <a href="{{ urls['home'] }}"></a>
@@ -45,11 +45,9 @@
     </header>
 
     <!-- Main Content -->
-    <main class="py-4 main-color">
-        <div class="container">
-            {% block content %}
-            {% endblock %}
-        </div>
+    <main class="py-4 main-color main-background flex-grow-1" style="background-image: url('{{ base_url }}/assets/imgs/background.png'); min-height: 100%;">
+        {% block content %}
+        {% endblock %}
     </main>
 
     <!-- Footer -->
