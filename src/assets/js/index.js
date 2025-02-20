@@ -10,23 +10,38 @@ function getLatestEpisodes(data, number = 3) {
     return allEpisodes.slice(0, number);
 }
 
-function make_carousel(data) {
-    const latestEpisodes = getLatestEpisodes(data);
+function getSeriesWithLatestEpisodes(data, number = 3) {
+    allSeries = []
 
+    data.forEach(series => {
+        var latestEpisode = null;
+        series.episodes.forEach(episode => {
+            if(latestEpisode == null || latestEpisode.timestamp < episode.timestamp) {
+                latestEpisode = episode;
+            }
+        })
+        if(latestEpisode != null) {
+            allSeries.push({"serie": series, "episode": latestEpisode});
+        }
+    })
+
+    return allSeries.slice(0, number)
+}
+
+function make_carousel(data) {
+    const latestSeasons = getSeriesWithLatestEpisodes(data);
     const carouselContent = document.getElementById("carouselContent");
 
-    carouselContent.innerHTML = latestEpisodes.map((episode, index) => {
-    const series = data.find(series => series.episodes.includes(episode));
+    carouselContent.innerHTML = latestSeasons.map((data, index) => {
+    const serie = data.serie;
 
     return `
         <div class="carousel-item ${index === 0 ? 'active' : ''}">
-            <a href="${episode.video}" target="_blank">
-                <div class="d-flex justify-content-center align-items-center" style="height: 300px; background: #ddd; border-radius: 10px;">
-                    <img src="${episode.thumbnail}" alt="${episode.name}" class="d-block w-100" style="object-fit: cover; height: 100%; border-radius: 10px;">
+            <a href="#">
+                <div class="d-flex justify-content-center align-items-center spolecenstvo-carousel">
+                    <img src="${serie.thumbnail}" alt="${serie.name}" class="d-block w-100" style="object-fit: cover; height: 100%; border-radius: 10px;">
                     <div class="carousel-caption d-none d-md-block pb-0">
-                        <h4>${series.name}</h4>
-                        <h6>${episode.name}</h6>
-                        <p>Sezóna ${(episode.season).toString().padStart(2, "0")} - Epizoda ${(episode.episode).toString().padStart(2, "0")}</p>
+                        <p class="fs-4 m-0">${serie.name}</p>
                     </div>
                 </div>
             </a>
@@ -50,7 +65,7 @@ function make_news(data) {
         return `
             <tr>
                 <td rowspan="2" class="w-5">
-                    <img src="${episode.thumbnail}" alt="${episode.name}" class="d-block mr-2" style="object-fit: cover; max-height: 5em; border-radius: 10px;">
+                    <img src="${episode.thumbnail}" alt="${episode.name}" class="d-block mr-2 news-image pr-2" style="">
                 </td>
                 <td class="w-50">
                     <h6>${series.name} - ${episode.name}</h6>
@@ -61,7 +76,7 @@ function make_news(data) {
             </tr>
             <tr>
                 <td>
-                    <p>${episode.description}</p>
+                    <p class="description">${episode.description}</p>
                 </td>
             </tr>
         `
@@ -69,11 +84,7 @@ function make_news(data) {
 }
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    fetch('https://raw.githubusercontent.com/SpolecenstvoDabingu/releases/refs/heads/main/data.json') // Replace with your API URL
-        .then(response => response.json())
-        .then(data => {
-            make_carousel(data);
-            make_news(data);
-        });
-});
+function runMakers(data) {
+    make_carousel(data);
+    make_news(data);
+}

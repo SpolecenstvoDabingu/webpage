@@ -1,3 +1,82 @@
 .carousel-img {
     width: 100%;
 }
+
+.carousel-caption {
+    font-weight: 600;
+    bottom: .5rem;
+}
+
+.news-image {
+    object-fit: cover;
+    max-height: 5em;
+    border-radius: 10px;
+}
+
+.description {
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 4em;
+    line-height: 1em;
+}
+
+
+.spolecenstvo-carousel {
+    background: #ddd;
+    border-radius: 10px;
+    aspect-ratio: 22/5;
+}
+
+@media (min-width: 576px) {
+    .spolecenstvo-carousel {
+        height: 130px;
+        aspect-ratio: initial;
+    }
+    .carousel-caption {
+        bottom: .5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .spolecenstvo-carousel {
+        height: 174px;
+        aspect-ratio: initial;
+    }
+    .carousel-caption {
+        bottom: .75rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .spolecenstvo-carousel {
+        height: 225px;
+        aspect-ratio: initial;
+    }
+    .carousel-caption {
+        bottom: .75rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .spolecenstvo-carousel {
+        height: 272px;
+        aspect-ratio: initial;
+    }
+    .carousel-caption {
+        bottom: 1rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .spolecenstvo-carousel {
+        height: 318px;
+        aspect-ratio: initial;
+    }
+    .carousel-caption {
+        bottom: 1.25rem;
+    }
+}

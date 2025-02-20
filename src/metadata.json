@@ -1,7 +1,7 @@
 [
     {"template": "index.html", "title": "Domov", "alias": "home"},
     {"template": "movies.html", "title": "Filmy", "alias": "movies"},
-    {"template": "series.html", "title": "Seriály", "alias": "sereis"},
+    {"template": "serials.html", "title": "Seriály", "alias": "serials"},
     {"template": "scenes.html", "title": "Scénky", "alias": "scenes"},
     {"template": "upcomming.html", "title": "Připravujeme", "alias": "upcomming"},
     {"template": "about.html", "title": "O nás", "alias": "about"},

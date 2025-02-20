@@ -3,6 +3,21 @@
 Filmy
 {% endblock %}
 
+{% block styles %}
+<link rel="stylesheet" href="{{ base_url }}/assets/css/movies.css">
+{% endblock %}
+
 {% block content %}
-<h2>None yet</h2>
+<div class="px-4 d-flex">
+    <div class="container">
+        <h3 class="text-center">Filmy</h3>
+        <div id="movies" class="container mt-4">
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ base_url }}/assets/js/movies.js"></script>
 {% endblock %}

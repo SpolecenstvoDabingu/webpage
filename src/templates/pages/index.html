@@ -8,24 +8,28 @@ Home
 {% endblock %}
 
 {% block content %}
-<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner" id="carouselContent">
-        <!-- Items will be dynamically inserted here -->
+<div class="px-4 d-flex">
+    <div class="container">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" id="carouselContent">
+                <!-- Items will be dynamically inserted here -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <h2 class="pt-2">Novinky</h2>
+        <table class="w-100">
+            <tbody class="news border-top" id="news">
+            </tbody>
+        </table>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
 </div>
-<h2 class="pt-2">Novinky</h2>
-<table class="w-100">
-    <tbody class="news border-top" id="news">
-    </tbody>
-</table>
 {% endblock %}
 
 
