@@ -47,7 +47,7 @@ function make_carousel(data) {
         <div class="carousel-item ${index === 0 ? 'active' : ''}">
             <a href="#">
                 <div class="d-flex justify-content-center align-items-center spolecenstvo-carousel">
-                    <img src="${serie.thumbnail}" alt="${serie.name}" class="d-block w-100" style="object-fit: cover; height: 100%; border-radius: 10px;">
+                    <img src="${serie.banner}" alt="${serie.name}" class="d-block w-100" style="object-fit: cover; height: 100%; border-radius: 10px;">
                     <div class="carousel-caption d-none d-md-block pb-0">
                         <p class="fs-4 m-0">${serie.name}</p>
                     </div>
