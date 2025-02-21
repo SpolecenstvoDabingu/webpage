@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}
+Epizody
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ base_url }}/assets/css/serial.css">
+{% endblock %}
+
+{% block content %}
+<div class="px-4 d-flex">
+    <div class="container">
+        <h3 class="text-center">Epizody</h3>
+        <div id="episodes" class="container mt-4">
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ base_url }}/assets/js/serial.js"></script>
+{% endblock %}

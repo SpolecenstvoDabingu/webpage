@@ -1,8 +1,12 @@
 [
     {"template": "index.html", "title": "Domov", "alias": "home"},
     {"template": "movies.html", "title": "Filmy", "alias": "movies"},
+    {"template": "movie.html", "title": "Film", "alias": "movie", "include": false},
     {"template": "serials.html", "title": "Seriály", "alias": "serials"},
+    {"template": "serial.html", "title": "Seriál", "alias": "serial", "include": false},
+    {"template": "episode.html", "title": "Epizoda", "alias": "episode", "include": false},
     {"template": "scenes.html", "title": "Scénky", "alias": "scenes"},
+    {"template": "scene.html", "title": "Scénka", "alias": "scene", "include": false},
     {"template": "upcomming.html", "title": "Připravujeme", "alias": "upcomming"},
     {"template": "about.html", "title": "O nás", "alias": "about"},
     {"template": "contact.html", "title": "Kontakt", "alias": "contact"},
