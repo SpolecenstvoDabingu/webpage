@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}
+Epizoda
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ base_url }}/assets/css/episode.css">
+{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center flex-column">
+    <h3 id="title" class="pb-2"></h3>
+    <iframe id="episode" src="" width="800" height="450" allow="autoplay" style="border: none;" class="rounded bar-color"></iframe>
+
+    <div class="mt-3" id="arrows">
+        <a href="" id="prev"><button class="btn btn-primary me-2"><i class="fas fa-angle-left"></i></button></a>
+        <a href="" id="next"><button class="btn btn-primary"><i class="fas fa-angle-right"></i></button></a>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ base_url }}/assets/js/episode.js"></script>
+{% endblock %}
