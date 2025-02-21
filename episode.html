@@ -6,14 +6,14 @@
     <meta name="description" content="Oficiální web Společenstva Dabingu, věnovaný českému dabingu a jeho tvůrcům.">
     <link rel="icon" type="image/x-icon" href="https://SpolecenstvoDabingu.github.io/webpage/assets/imgs/logo.ico">
     <title>Společenstvo Dabingu 🍻 | 
-Kontakty
+Epizoda
 </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://SpolecenstvoDabingu.github.io/webpage/assets/css/bs-expand.css">
     <link rel="stylesheet" href="https://SpolecenstvoDabingu.github.io/webpage/assets/css/base.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     
-<link rel="stylesheet" href="https://SpolecenstvoDabingu.github.io/webpage/assets/css/contacts.css">
+<link rel="stylesheet" href="https://SpolecenstvoDabingu.github.io/webpage/assets/css/episode.css">
 
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -80,7 +80,7 @@ Kontakty
                                 
                                     
                                     <li class="nav-item">
-                                        <a href="https://SpolecenstvoDabingu.github.io/webpage/contact.html" class="nav-link active">Kontakt</a>
+                                        <a href="https://SpolecenstvoDabingu.github.io/webpage/contact.html" class="nav-link ">Kontakt</a>
                                     </li>
                                     
                                 
@@ -98,10 +98,13 @@ Kontakty
     <!-- Main Content -->
     <main class="py-4 main-color main-background flex-grow-1" style="background-image: url('https://SpolecenstvoDabingu.github.io/webpage/assets/imgs/background.png'); min-height: 100%;">
         
-<div class="px-4 d-flex">
-    <div class="container">
-        <h1>Kontakty</h1>
-        <h5>TBD</h5>
+<div class="container d-flex justify-content-center align-items-center flex-column">
+    <h3 id="title" class="pb-2"></h3>
+    <iframe id="episode" src="" width="800" height="450" allow="autoplay" style="border: none;" class="rounded bar-color"></iframe>
+
+    <div class="mt-3" id="arrows">
+        <a href="" id="prev"><button class="btn btn-primary me-2"><i class="fas fa-angle-left"></i></button></a>
+        <a href="" id="next"><button class="btn btn-primary"><i class="fas fa-angle-right"></i></button></a>
     </div>
 </div>
 
@@ -133,7 +136,7 @@ Kontakty
         }
     </script>
     
-<script src="https://SpolecenstvoDabingu.github.io/webpage/assets/js/contacts.js"></script>
+<script src="https://SpolecenstvoDabingu.github.io/webpage/assets/js/episode.js"></script>
 
 </body>
 </html>
